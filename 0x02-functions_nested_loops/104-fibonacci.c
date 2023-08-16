@@ -1,67 +1,53 @@
-#include"main.h"
-
+#include "main.h"
 /**
- * numLength - returns the length of string
- *
- * @num: operand number
- *
- * Return: number of digits
-*/
-
-int numLength(int num)
+ * * numbFunc - length of string
+ * *
+ * * @nbr: number
+ * * Return: number
+ * *
+ */
+int numbFunc(int nbr)
 {
-	int length = 0;
+	int l = 0;
 
-	if (!num)
+	if (!nbr)
 		return (1);
-
-	while (num)
+	while (nbr)
 	{
-		num = num / 10;
-		length += 1;
+		nbr = nbr / 10;
+		l += 1;
 	}
-
-	return (length);
+	return (l);
 }
-
 /**
- * main - Entry point
+ * * main - Entry point
+ * *
+ * * Description: Fibonacci numbers
+ * * Return: always 0
  *
- * Description: prints the first 98 Fibonacci numbers
- *	starting with 1 and 2 followed by a new line
- *
- *	Solution was copied from Nobert Patrick
- *	Wise, github handle: Trikcode
- *
- * Return: Always 0 (Success)
-*/
-
+ */
 int main(void)
 {
-	int count, initial0s;
-	unsigned long f1 = 1, f2 = 2, sum, mx = 100000000, f1o = 0, f2o = 0, sumo = 0;
+	int count, i;
+	unsigned long f = 1, f1 = 2, sum, mx = 100000000, f2 = 0, f3 = 0, sum1 = 0;
 
-	for (count = 1; count <= 98; ++count)
+	for (count = 1; count <= 98; count++)
 	{
-		if (f1o > 0)
-			printf("%lu", f1o);
-		initial0s = numLength(mx) - 1 - numLength(f1);
-
-		while (f1o > 0 && initial0s > 0)
+		if (f2 > 0)
+			printf("%lu", f2);
+		i = numbFunc(mx) - 1 - numbFunc(f);
+		while (f2 > 0 && i > 0)
 		{
 			printf("%d", 0);
-			--initial0s;
+			i--;
 		}
-
-		printf("%lu", f1);
-
-		sum = (f1 + f2) % mx;
-		sumo = f1o + f2o + (f1 + f2) / mx;
-		f1 = f2;
-		f1o = f2o;
-		f2 = sum;
-		f2o = sumo;
-
+		printf("%lu", f);
+		sum = (f + f1) % mx;
+		sum1 = f2 + f3 + (f + f1) / mx;
+		f = f1;
+		f2 = f3;
+		f1 = sum;
+		f3 = sum1;
 		if (count != 98)
 			printf(", ");
 		else
