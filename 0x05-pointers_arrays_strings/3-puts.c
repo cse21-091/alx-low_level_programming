@@ -2,20 +2,20 @@
 #include <stdio.h>
 
 /**
- * _pust - prints out a string 
- * @str: the string to be printed
- * return : null 
- **/
+ * _puts - prints out a string
+ * @str: the string wanting to be printed
+ * Return: Null
+ */
 void _puts(char *str)
 {
-	int x;
+int x;
 
-	x = 0;
-	while (str[x] != 0)
-	{
-		_putchar(str[x]);
-		x++;
-	}
-	_putchar('\n');
-	return;
+x = 0;
+while (str[x] != 0)
+{
+_putchar(str[x]);
+x++;
+}
+_putchar('\n');
+return;
 }
