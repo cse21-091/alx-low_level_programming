@@ -2,16 +2,16 @@
 #include <stdio.h>
 
 /**
- * puts2 - puts some other string instead of entire string 
- * @str: the string , the working function
- * return : null
- * */
+ * puts2 - puts every other string instead of an entire string
+ * @str: the string the function is working on
+ * Return: Null
+ */
 void puts2(char *str)
 {
-	int x;
+int x;
 
-	x = 0;
-	while (str[x] != 0)
+x = 0;
+while (str[x] != 0)
 {
 if (x % 2 == 0)
 {
