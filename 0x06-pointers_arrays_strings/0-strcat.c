@@ -1,7 +1,6 @@
-#include <main.c>
 #include <stdio.h>
 
-char *_strcat(char *dest, char *src)
+char *_strncat(char *dest, char *src, int n)
 {
     char *dest_ptr = dest;
 
@@ -10,11 +9,12 @@ char *_strcat(char *dest, char *src)
         dest_ptr++;
     }
 
-    // Copy the source string to the end of the destination
-    while (*src != '\0') {
+    // Append up to n characters from the source string
+    while (*src != '\0' && n > 0) {
         *dest_ptr = *src;
         dest_ptr++;
         src++;
+        n--;
     }
 
     // Add the terminating null byte
@@ -22,4 +22,3 @@ char *_strcat(char *dest, char *src)
 
     return dest;
 }
-
