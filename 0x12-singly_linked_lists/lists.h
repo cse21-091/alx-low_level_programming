@@ -8,13 +8,13 @@
  * @next_node: points to the next node
  *
  * descr: structural rep for a node in singly linked list
- * used for an ALX project
+ * used for an ALX project	
  */
-typedef struct ListNode
+typedef struct list_s
 {
-	char *str_leng;
-	unsigned int str_leng;
-	struct ListNode *next_node;
+	char *str;
+	unsigned int len;
+	struct list_s *next;
 } list_t;
 
 size_t print_list(const list_t *h);
